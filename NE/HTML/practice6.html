@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Forms</title>
+</head>
+<body>
+	<h1>Web Forms</h1>
+	<form name="frm1" method="post">
+	<table width="500px" cellspacing="0" cellpadding="5" border="1">
+
+	<tr>
+		<td width="40%">
+		<label for="user_name">Name</label>
+		</td>
+		<td width="60%">
+		<input type="text" name="user_name" id="user_name" value="Raj" />
+		</td>
+	</tr>
+
+	<tr>
+		<td width="40%">
+		<label for="user_email">Email</label>
+		</td>
+		<td width="60%">
+		<input type="email" name="user_email" id="user_email" required />
+		</td>
+	</tr>
+	<tr>
+		<td width="40%">
+		<label for="user_pwd">Password</label>
+		</td>
+		<td width="60%">
+		<input type="password" name="user_pwd" id="user_pwd" required />
+		</td>
+	</tr>
+
+	<tr>
+		<td width="40%">
+		<label for="user_addr">Address</label>
+		</td>
+		<td width="60%">
+		<textarea name="user_addr" id="user_addr" rows="6" cols="30">Silicon City, Sector 75, Noida - 201301</textarea>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<label>Hobby</label>
+		</td>
+		<td>
+			<input type="checkbox" name="user_hobby[]" id="user_hobby1" />Cricket
+			<input type="checkbox" name="user_hobby[]" id="user_hobby2" />Cooking
+			<input type="checkbox" name="user_hobby[]" id="user_hobby3" />Movie
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<label>Gender</label>
+		</td>
+		<td>
+			<input type="radio" name="user_gender" id="user_gender_m" />Male
+			<input type="radio" name="user_gender" id="user_gender_f" />Female
+		</td>
+	</tr>
+	<tr>
+		<td><label>Country</label></td>
+		<td>
+			<select name="user_country" id="user_country">
+			<option value="">Choose Country</option>
+			<option value="in">India</option>
+			<option value="us">USA</option>
+			<option value="uk">UK</option>
+			<option value="sl">Sri Lanka</option>
+			</select>
+		</td>
+	</tr>
+
+	<tr>
+		<td colspan="2">
+		<input type="submit" name="submit_btn" id="submit_btn" value="Submit" />
+		<input type="reset" name="reset_btn" id="reset_btn" value="Clear Form" />
+		</td>
+		
+	</tr>
+
+
+	</table>
+	</form>	
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Web Forms</title>
+</head>
+<body>
+	<h1> Web Forms </h1>
+	<form name="frm" method="post">
+	<table border="1" cellspacing="0" cellpadding="5" width="500px">
+	
+	<tr>
+		<td>
+		<label for="user_name">Name</label>
+		</td>
+		<td>
+		<input type="text" name="user_name" id="user_name" required />
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		<label for="user_email">Email</label>
+		</td>
+		<td>
+		<input type="email" name="user_email" id="user_email" required />
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		<label for="user_pwd">Password</label>
+		</td>
+		<td>
+		<input type="password" name="user_pwd" id="user_pwd" required />
+		</td>
+	</tr>
+
+	<tr>
+		<td>Address</td>
+		<td>
+			<textarea rows="6" cols="30" name="user_addr" id="user_addr"></textarea>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>Gender</td>
+		<td>
+		<input type="radio" name="user_gender" id="user_gender1" value="male" /> Male
+		<input type="radio" name="user_gender" id="user_gender2" value="female" /> Female
+		</td>
+	</tr>
+
+	<tr>
+		<td>Hobby</td>
+		<td>
+		<input type="checkbox" name="user_hobby" id="user_hobby1" value="Gardening" /> Gardening
+		<input type="checkbox" name="user_hobby" id="user_hobby2" value="Cooking" /> Cooking
+		<input type="checkbox" name="user_hobby" id="user_hobby3" value="Movie" /> Movie
+		</td>
+	</tr>
+
+	<tr>
+		<td><label>Select Country</label></td>
+		<td>
+		<select name="user_country" id="user_country">
+			<option value="">Select Country</option>
+			<option value="IN">India</option>
+			<option value="USA">USA</option>
+			<option value="UK">UK</option>
+			<option value="SL">Sri Lanka</option>
+		</select>
+		</td>
+	</tr>
+
+	<tr>
+		<td colspan="2">
+		<input type="submit" name="submit_btn" id="submit_btn" value="Submit" />
+		<input type="reset" name="reset_btn" id="reset_btn" value="Clear Form" />
+		</td>
+	</tr>
+	
+	
+
+
+	</table>
+	</form>
+</body>
+</html>
