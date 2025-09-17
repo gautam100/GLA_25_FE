@@ -1,0 +1,11 @@
+body{
+	background-color:#F3C6C6;
+	font-family: cursive, "Times New Roman";
+	font-size: x-large;
+}
+p{
+	color:green;
+	border: 2px solid #E61F23;
+	padding:15px;
+	margin:15px;
+}
