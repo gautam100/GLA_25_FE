@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSS continues...</title>
+<link rel="stylesheet" href="boxes.css" />
+</head>
+<body>
+<div id="container">
+
+	<div class="box scroll">
+	<p>
+	If you're developing an application, you'll want to make sure you're testing it under conditions that closely simulate a production environment. In production, you'll have an army of users banging away at your app and filling your database with data, which puts stress on your code. If you're hand-entering data into a test environment one record at a time using the UI, you're never going to build up the volume and variety of data that your app will accumulate in a few days in production. Worse, the data you enter will be biased towards your own usage patterns and won't match real-world usage, leaving important bugs undiscovered.
+	</p>
+	<p>
+	If you're developing an application, you'll want to make sure you're testing it under conditions that closely simulate a production environment. In production, you'll have an army of users banging away at your app and filling your database with data, which puts stress on your code. If you're hand-entering data into a test environment one record at a time using the UI, you're never going to build up the volume and variety of data that your app will accumulate in a few days in production. Worse, the data you enter will be biased towards your own usage patterns and won't match real-world usage, leaving important bugs undiscovered.
+	</p>
+	</div>
+
+	<div class="box linear-gradient1" id="box2">
+	-----
+	</div>
+	<div class="box linear-gradient2">
+	</div>
+	<div class="box linear-gradient3" id="box4" onmouseover="main()">
+	Click Me!
+	</div>
+
+	<div class="box radial-gradient">
+	<input type="text" id="txt_box" onkeyup="xyz(this)" value="any content" />
+	</div>
+
+	<div class="box conic-gradient">
+	</div>
+
+</div>
+<script>
+	function main(){
+		alert("Hello World!")
+	}
+	function xyz(t){
+		document.getElementById("box2").innerHTML= t.value;
+	}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

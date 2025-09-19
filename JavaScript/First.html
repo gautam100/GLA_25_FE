@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My First HTML page</title>
+	</head>
+	<body onload="main()">
+		<div id="first_div" style="width:150px; height:50px; border:1px solid #000;">My Div</div>
+		<table align="center" border="1" cellpadding="10" cellspacing="0" rules="all">
+			<thead>
+			<tr>
+				<th>Roll</th>
+				<th>Name</th>
+				<th>Specialization</th>
+			</tr>
+			</thead>
+				
+			<tbody>
+			<tr>
+				<td>1</td>
+				<td>Rohit</td>
+				<td>AI</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Raj</td>
+				<td>Cloud</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Neha</td>
+				<td rowspan="3">Fullstack</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Amit</td>
+				
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Mohit</td>
+				
+			</tr>
+			</tbody>
+			<tfoot onclick="xyz()">
+			<tr>
+				<td align="center" colspan="3">Thank you!</td>
+			</tr>
+			</tfoot>
+		</table>
+		<hr />
+
+
+		<a href="practice5.html">
+		Go back
+		</a>
+
+
+	<script>
+		function main(){
+			alert(a); 
+			var a;
+			a = 10;
+			alert(a,b);
+			var b;
+			
+			//Event - onclick, onchange, onmouseover, onload
+			//Hoisting
+		}
+		function xyz(){
+			document.getElementById("first_div").innerHTML = "<h1>Hello world</h1>";
+		}
+	</script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

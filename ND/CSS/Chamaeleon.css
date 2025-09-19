@@ -1,0 +1,23 @@
+body{
+	background-color:#F7B4B4; #red
+}
+@media only screen and (max-width:766px){
+	body{
+	background-color:#B4BCF7; #blue
+	}
+}
+@media only screen and (max-width:455px){
+	body{
+	background-color:#A7D883; #green
+	}
+	
+}
+.box{
+	margin:20px;
+	width:300px;
+	height:200px;
+	background-color:yellow;
+ 	float:left;
+	display:flex;
+}
+

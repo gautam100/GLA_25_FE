@@ -1,0 +1,29 @@
+.box{
+	height: 250px;
+	width: 300px;
+	border: 1px solid #000;
+	float:left;
+	margin:20px;
+	padding:15px;
+
+}
+.scroll-bar{
+	overflow-y:scroll;
+}
+.linear-gredient1{
+	background-image: linear-gradient(to right,#E96364,#E61F23);
+}
+.linear-gredient2{
+	background-image: linear-gradient(to right,#9DF5D2,#7ED4B2,#50A687);
+}
+.radial-gredient1{
+	background-image: radial-gradient(red,green,blue,yellow);
+}
+
+.conic-gradient{
+background-image: conic-gradient(#F71119, #F49D15, #F5F113, #71CD40, #00A8E9, #086FB5, #632E8B);
+}
+
+
+
+

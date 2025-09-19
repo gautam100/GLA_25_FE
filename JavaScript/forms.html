@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Web Forms</title>
+</head>
+<body>
+	<h1> Web Forms </h1>
+	<form name="frm" method="get">
+	<table border="1" cellspacing="0" cellpadding="5" width="500px">
+	
+	<tr>
+		<td>
+		<label for="user_name">Name</label>
+		</td>
+		<td>
+		<input type="text" name="user_name" id="user_name" required />
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		<label for="user_email">Email</label>
+		</td>
+		<td>
+		<input type="email" name="user_email" id="user_email" required />
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		<label for="user_pwd">Password</label>
+		</td>
+		<td>
+		<input type="password" name="user_pwd" id="user_pwd" required />
+		</td>
+	</tr>
+
+
+	<tr>
+		<td colspan="2">
+		<input type="submit" name="submit_btn" id="submit_btn" value="Submit" onclick="main()" />
+		<input type="reset" name="reset_btn" id="reset_btn" value="Clear Form" />
+		</td>
+	</tr>
+	
+	
+
+
+	</table>
+	</form>
+<script>
+function main(){
+	alert("Hello World!")
+}
+</script>
+</body>
+</html>

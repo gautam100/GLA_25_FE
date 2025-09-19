@@ -1,0 +1,32 @@
+.box{
+	width:250px;
+	height:380px;
+	border: 1px solid #000;
+	padding:15px;
+	float:left;
+	margin:10px;
+}
+.scroll{
+	overflow-y:scroll;
+}
+.linear-gradient1{
+	background-image: linear-gradient(to top, #F79B76, #F60000);
+}
+.linear-gradient2{
+	background-image: linear-gradient(to right, #F79B76, #F60000);
+}
+.linear-gradient3{
+	background-image: linear-gradient(to top left, #F79B76, #F60000);
+}
+
+.radial-gradient{
+	background-image: radial-gradient(#25C600, #77DC7E, #CBEACD);
+}
+
+.conic-gradient{
+background-image: conic-gradient(#F71119, #F49D15, #F5F113, #71CD40, #00A8E9, #086FB5, #632E8B);
+}
+
+
+
+
