@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <form method="get">
+      <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+          <td>First Name</td>
+          <td>
+            <input
+              name="first_name"
+              type="text"
+              id="first_name"
+              placeholder="Enter name"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Second Name</td>
+          <td>
+            <input type="text" name="second_name" id="second_name" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input type="email" name="email" id="email" required /></td>
+        </tr>
+
+        <tr>
+          <td>Hobby</td>
+          <td>
+            <input type="checkbox" name="hobby1" value="gardening" />Gardening
+            <input type="checkbox" name="hobby2" value="cooking" />Cooking
+            <input type="checkbox" name="hobby3" value="cricket" />Cricket
+          </td>
+        </tr>
+        <tr>
+          <td>Highest Qualification</td>
+          <td>
+            <input type="radio" name="qualification" value="Mtech" />Mtech
+            <input type="radio" name="qualification" value="MCA" />MCA
+            <input type="radio" name="qualification" value="Btech" />Btech
+          </td>
+        </tr>
+        <tr>
+          <td>University</td>
+          <td>
+            <select name="university" id="university">
+                <option value="GLA">GLA</option>
+                <option value="LPU">LPU</option>
+                <option value="chitkara">Chitkara</option>
+                <option value="parul">Parul</option>
+                <option value="GLA">GLA</option>
+                <option value="LPU">LPU</option>
+                <option value="chitkara">Chitkara</option>
+                <option value="parul">Parul</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <input
+              type="submit"
+              id="submit_btn"
+              name="submit_btn"
+              value="Submit"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

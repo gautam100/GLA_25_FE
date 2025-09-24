@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Web Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form enctype="multipart/form-data">
+            <table cellspacing="5">
+                <tr>
+                    <td>User name:</td>
+                    <td><input type="text" name="user_name" id="user_name" placeholder="Enter name" value="Abhinav" required /></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="user_email" id="user_email" placeholder="Enter Email" value="abhi@me.in" required /></td>
+                </tr>
+                <tr>
+                    <td>Hobby:</td>
+                    <td>
+                        <input type="checkbox" name="hobby1" value="gardening" />Gardening
+                        <input type="checkbox" name="hobby2" value="cooking" />Cooking
+                        <input type="checkbox" name="hobby3" value="Cricket" />Cricket
+                    </td>
+                </tr>
+                <tr>
+                    <td>Highest qualifaction:</td>
+                    <td>
+                        <input type="radio" name="qualification" id="qualification1" value="Mtech" />
+                        <label for="qualification1">Mtech</label>
+                        <input type="radio" name="qualification" id="qualification2" value="Btech" />
+                        <label for="qualification2">Btech</label>
+                        <input type="radio" name="qualification" id="qualification3" value="MCA" />
+                        <label for="qualification3">MCA</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>University:</td>
+                    <td>
+                        <select name="university" id="">
+                            <option value="GLA">GLA</option>
+                            <option value="PTU">Punjab Tech University</option>
+                            <option value="CU" selected>Chandigarh University</option>
+                            <option value="LPU">LPU</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload your image</td>
+                    <td><input type="file" name="user_image" />
+                </tr>
+                
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="submit_btn" id="submit_btn" value="Submit" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
