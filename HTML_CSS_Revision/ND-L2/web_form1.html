@@ -8,14 +8,15 @@
   </head>
   <body>
     <h1>Web Form</h1>
-    <form method="post">
+    <form method="get">
       <table border="1" width="400px" cellpadding="5" cellspacing="0">
         <tr>
-          <td>First name:</td>
+          <td><label for="user_name">First name:</label></td>
           <td>
             <input
               type="text"
               name="user_name"
+              id="user_name"
               placeholder="Enter name"
               required
             />
@@ -28,8 +29,48 @@
               type="email"
               name="user_email"
               placeholder="Enter email"
+              value="Amit@me.in"
+              readonly
               required
             />
+          </td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type="password" name="user_pwd" /></td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td><input type="number" name="user_age" /></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td><textarea name="user_addr" rows="10" cols="30"></textarea></td>
+        </tr>
+        <tr>
+          <td>Country</td>
+          <td>
+            <select name="user_country"> 
+                <option value="IN">India</option>
+                <option value="AUS">Australia</option>
+                <option value="USA" selected>USA</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Certificates</td>
+          <td>
+            <input type="checkbox" name="aws" value="aws">AWS
+            <input type="checkbox" name="scrum" value="scrum master">Scrum Master
+            <input type="checkbox" name="oracle" value="oracle" checked>Oracle
+          </td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>
+            <input type="radio" name="gender" id="gender1" value="male" checked><label for="gender1">Male</label>
+            <input type="radio" name="gender" id="gender2" value="female"><label for="gender2">Female</label>
+            <input type="radio" name="gender" id="gender3" value="others"><label for="gender3">Others</label>
           </td>
         </tr>
         <tr>
