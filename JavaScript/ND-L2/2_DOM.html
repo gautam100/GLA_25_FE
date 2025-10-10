@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>My First JS</title>
+	<style>
+	.box{
+		width: 350px;
+		height: 220px;
+		border: 1px solid #000;
+		margin: 20px;
+		padding: 10px;
+	}
+	.btn{
+		width: 100px; height: 30px; background-color: #37F713; color: #335B39; margin: 20px;
+	}
+	.inner-box{
+		width: 100px;
+		height: 180px;
+		border: 1px solid #000;
+		margin: 20px;
+		padding: 10px;
+		float: left;
+	}
+	</style>
+</head>
+<body>
+	<h1>JavaScript</h1>
+
+	<div id="div1" class="box" onmouseover="main()" onmouseout="clear_result()">
+		<div id="div1_child1" class="inner-box">
+			
+		</div>
+		<div id="div1_child2" class="inner-box">
+
+		</div>
+	</div>
+	
+	<div id="result_container"></div>
+	
+	<script>
+	function main(){
+		document.getElementById("result_container").innerHTML= "<h1>You are inside parent div</h1>";
+	}
+	function clear_result(){
+		document.getElementById("result_container").innerHTML= "";
+	}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
