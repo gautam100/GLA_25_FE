@@ -26,11 +26,11 @@
 <body>
 	<h1>JavaScript</h1>
 
-	<div id="div1" class="box" onmouseover="main()" onmouseout="clear_result()">
-		<div id="div1_child1" class="inner-box">
+	<div id="div1" class="box" onmouseover="main('in')" onmouseout="main()">
+		<div id="div1_child1" class="inner-box" onmouseover="innerDiv1('in')" onmouseout="innerDiv1()">
 			
 		</div>
-		<div id="div1_child2" class="inner-box">
+		<div id="div1_child2" class="inner-box" onmouseover="innerDiv2('in')" onmouseout="innerDiv2()">
 
 		</div>
 	</div>
@@ -38,11 +38,26 @@
 	<div id="result_container"></div>
 	
 	<script>
-	function main(){
-		document.getElementById("result_container").innerHTML= "<h1>You are inside parent div</h1>";
+	function main(target=''){
+		if(target == 'in'){
+			document.getElementById("result_container").innerHTML= "<h1>You are inside parent div</h1>";
+		}else{
+			document.getElementById("result_container").innerHTML= "";
+		}
 	}
-	function clear_result(){
-		document.getElementById("result_container").innerHTML= "";
+	function innerDiv1(status=""){
+		if(status == 'in'){
+			document.getElementById("div1_child1").innerHTML= "<h2>You are in child 1</h2>";
+		}else{
+			document.getElementById("div1_child1").innerHTML= "";
+		}
+	}
+	function innerDiv2(status=""){
+		if(status == 'in'){
+			document.getElementById("div1_child2").innerHTML= "<h2>You are in child 2</h2>";
+		}else{
+			document.getElementById("div1_child2").innerHTML= "";
+		}
 	}
 	</script>
 </body>
