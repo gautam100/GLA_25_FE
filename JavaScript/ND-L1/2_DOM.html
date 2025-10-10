@@ -28,7 +28,7 @@
 	<h1>JavaScript</h1>
 
 	<div id="div1" class="box" onmouseover="main()" onmouseout="clr_result()">
-		<div id="div1_inner1" class="inner-box" onmouseover="inner1_text()">
+		<div id="div1_inner1" class="inner-box" onmouseover="inner1_text()" onmouseout="inner1_clear()">
 			
 		</div>
 		<div id="div1_inner2" class="inner-box" onmouseover="inner2_text()">
@@ -43,6 +43,7 @@
 	<script>
 	<!-- JS codes goes here -->
 	function main(){
+		//debugger;
 		document.getElementById("result_container").innerHTML = "<h1>You are in parent div</h1>";
 	}
 	function clr_result(){
@@ -54,6 +55,9 @@
 	function inner2_text(){
 		document.getElementById("div1_inner2").innerHTML = "<h1>You are in Child div2</h1>";
 	}
+	function inner1_clear(){
+		document.getElementById("div1_inner1").innerHTML = "";
+	} 
 	</script>
 </body>
 </html>
