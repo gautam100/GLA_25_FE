@@ -1,0 +1,68 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>My First JS</title>
+	<style>
+	.box{
+		width: 350px;
+		height: 220px;
+		border: 1px solid #000;
+		margin: 20px;
+		padding: 10px;
+	}
+	.inner-box{
+		width: 85px;
+		height: 180px;
+		border: 1px solid #000;
+		margin: 20px;
+		padding: 10px;
+		float:left;
+	}
+	.btn{
+		width: 100px; height: 30px; background-color: #37F713; color: #335B39; margin: 20px;
+	}
+	</style>
+</head>
+<body>
+	<h1>JavaScript</h1>
+
+	<div id="div1" class="box" onmouseover="main()" onmouseout="clr_result()">
+		<div id="div1_inner1" class="inner-box" onmouseover="inner1_text()">
+			
+		</div>
+		<div id="div1_inner2" class="inner-box" onmouseover="inner2_text()">
+			
+		</div>
+	</div>
+
+	<div id="result_container"></div>
+
+	
+
+	<script>
+	<!-- JS codes goes here -->
+	function main(){
+		document.getElementById("result_container").innerHTML = "<h1>You are in parent div</h1>";
+	}
+	function clr_result(){
+		document.getElementById("result_container").innerHTML = "";
+	}
+	function inner1_text(){
+		document.getElementById("div1_inner1").innerHTML = "<h1>You are in Child div1</h1>";
+	}
+	function inner2_text(){
+		document.getElementById("div1_inner2").innerHTML = "<h1>You are in Child div2</h1>";
+	}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

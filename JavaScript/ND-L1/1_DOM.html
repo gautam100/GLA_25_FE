@@ -1,0 +1,51 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>My First JS</title>
+	<style>
+	.box{
+		width: 250px;
+		height: 220px;
+		border: 1px solid #000;
+		margin: 20px;
+		padding: 10px;
+	}
+	.btn{
+		width: 100px; height: 30px; background-color: #37F713; color: #335B39; margin: 20px;
+	}
+	</style>
+</head>
+<body>
+	<h1>JavaScript</h1>
+
+	<div id="div1" class="box">
+	<!-- JS will access it -->
+	</div>
+
+	<button class="btn" onclick="main()">Click Me!</button>
+
+	<button class="btn" onclick="clr_box()">Clear Box!</button>
+
+	<script>
+	<!-- JS codes goes here -->
+	function main(){
+		alert("You Clicked");
+		document.getElementById("div1").innerHTML = "Hello GLA";
+	}
+	function clr_box(){
+		//debugger;
+		document.getElementById("div1").innerHTML = " ";
+	}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
