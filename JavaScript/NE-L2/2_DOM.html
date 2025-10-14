@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>My First JS</title>
+	<style>
+	.box{
+		width: 340px;
+		height: 240px;
+		border: 1px solid #000;
+		margin: 20px;
+		padding: 10px;
+	}
+	.btn{
+		width: 100px; height: 30px; background-color: #37F713; color: #335B39; margin: 20px;
+	}
+	.small_box{
+		width: 100px;
+		height: 200px;
+		border: 1px solid #000;
+		margin: 20px;
+		padding: 10px;
+		float:left;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="div1" class="box" onmouseover="handleParentDiv('in')" onmouseout="handleParentDiv('out')">
+		<div id="div1_child1" class="small_box" onmouseover="handleChildDiv1('in')" onmouseout="handleChildDiv1('out')"></div>
+		<div id="div2_child2" class="small_box"></div>
+	</div>
+
+	<div id="result_container">...</div>
+
+	<script>
+	function handleParentDiv(status){
+		if(status == 'in'){
+			document.getElementById("result_container").innerHTML = "<h1>You are inside Parent Div</h1>";
+		}else{
+			document.getElementById("result_container").innerHTML = "";
+		}
+	}
+	function handleChildDiv1(status){
+		if(status=='in')
+			document.getElementById("div1_child1").innerHTML = "<h2>You are inside child div1</h2>"
+		else
+			document.getElementById("div1_child1").innerHTML = ""
+	}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
