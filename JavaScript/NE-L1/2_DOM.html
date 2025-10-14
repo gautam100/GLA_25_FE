@@ -26,7 +26,7 @@
 <body>
 
 	<div id="div1" class="box" onmouseover="main()" onmouseout="clearResult()">
-		<div id="div1_child1" class="small_box"></div>
+		<div id="div1_child1" class="small_box" onmouseover="child1('in')" onmouseout="child1()"></div>
 		<div id="div2_child2" class="small_box"></div>
 	</div>
 
@@ -38,6 +38,14 @@
 	}
 	function clearResult(){
 		document.getElementById("result_container").innerHTML = "";
+	}
+
+	function child1(status=""){
+		if(status == 'in'){
+			document.getElementById("div1_child1").innerHTML = "You are inside child1";
+		}else{
+			document.getElementById("div1_child1").innerHTML = "";
+		}
 	}
 	</script>
 </body>

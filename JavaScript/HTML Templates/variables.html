@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Variables Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .main {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    /* Left side - buttons */
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .group {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      width: 150px;
+    }
+
+    .group h3 {
+      margin-top: 0;
+      text-align: center;
+      color: #333;
+      font-size: 18px;
+    }
+
+    button {
+      padding: 8px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      background: #007bff;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      width: 120px;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    /* Right side variable boxes */
+    .variables {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .var {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .label {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .box {
+      width: 160px;
+      height: 80px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .type {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main">
+
+    <!-- Left side: Buttons for A and B -->
+    <div class="controls">
+      <div class="group">
+        <h3>Set A</h3>
+        <button onclick="setA(5)">5</button>
+        <button onclick="setA('Hello')">"Hello"</button>
+        <button onclick="setA(true)">true</button>
+        <button onclick="setA(undefined)">undefined</button>
+        <button onclick="setA(null)">null</button>
+      </div>
+
+      <div class="group">
+        <h3>Set B</h3>
+        <button onclick="setB(10)">10</button>
+        <button onclick="setB('World')">"World"</button>
+        <button onclick="setB(false)">false</button>
+        <button onclick="setB(undefined)">undefined</button>
+        <button onclick="setB(null)">null</button>
+      </div>
+    </div>
+
+    <!-- Right side: Variable display -->
+    <div class="variables">
+      <div class="var">
+        <span class="label">A = </span>
+        <div>
+          <div class="box" id="boxA">?</div>
+          <div class="type" id="typeA">type: —</div>
+        </div>
+      </div>
+
+      <div class="var">
+        <span class="label">B = </span>
+        <div>
+          <div class="box" id="boxB">?</div>
+          <div class="type" id="typeB">type: —</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let A, B;
+
+    function setA(value) {
+      A = value;
+      document.getElementById("boxA").innerText = String(value);
+      document.getElementById("typeA").innerText = "type: " + typeof value;
+    }
+
+    function setB(value) {
+      B = value;
+      document.getElementById("boxB").innerText = String(value);
+      document.getElementById("typeB").innerText = "type: " + typeof value;
+    }
+  </script>
+
+</body>
+</html>
