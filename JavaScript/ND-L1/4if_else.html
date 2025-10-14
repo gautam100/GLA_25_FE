@@ -1,0 +1,25 @@
+<html>
+<head>
+
+</head>
+<body>
+	<input type="number" id="num1" placeholder="Enter first number" />
+	<br />
+	<input type="number" id="num2" placeholder="Enter Second number" />
+	<br />
+	<input type="button" id="btn" value="Check" onclick="chkHigherNumber()" />
+	<div id="result"></div>
+	<script>
+	function chkHigherNumber(){
+		//debugger;
+		let a = parseInt(document.getElementById("num1").value)
+		let b = parseInt(document.getElementById("num2").value)
+		if(a>b){
+			document.getElementById("result").innerHTML = a+" is greater";	
+		}else{
+			document.getElementById("result").innerHTML = b+" is greater";
+		}
+	}
+	</script>
+</body>
+</html>

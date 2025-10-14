@@ -42,6 +42,23 @@
 	let first_num = parseInt(document.getElementById("num1").value)
 	let second_num =  parseInt(document.getElementById("num2").value)
 	let sum = 0
+	
+	// ~~~~~~~~~~~~~~~~~~ validation ~~~~~~~~~~~~~~~~~~
+	let isError = false
+	if(Number.isInteger(first_num) == false){
+		document.getElementById("num1").style.border = "1px solid red"; 
+		//isError = true
+	}else{
+		document.getElementById("num1").style.border = "1px solid #000";
+	}
+	if(Number.isInteger(second_num) == false){
+		document.getElementById("num2").style.border = "1px solid red";
+		//isError = true 
+	}else{
+		document.getElementById("num2").style.border = "1px solid #000";
+	}
+	// ~~~~~~~~~~~~~~~~~~ validation ~~~~~~~~~~~~~~~~~~
+	
 	sum = first_num + second_num;
 	document.getElementById("result").innerHTML = "Result is: "+sum;
 
