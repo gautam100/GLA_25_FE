@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple if</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      text-align: center;
+    }
+    input {
+      padding: 8px;
+      margin: 5px;
+      width: 200px;
+      text-align: left;
+    }
+    button {
+      padding: 8px 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>WAP in which accept three numbers and print the highest number</h2>
+
+  <form>
+    <input type="number" id="num1" placeholder="Enter first number" required>
+    <input type="number" id="num2" placeholder="Enter second number" required><br>
+    <input type="number" id="num3" placeholder="Enter third number" required><br>
+    <button type="button" onclick="printHighestNum()">Check	</button>
+  </form>
+
+  <div id="result">Result</div>
+
+  <script>
+	function printHighestNum(){
+	
+	 //Application logic
+	 let a = parseInt(document.getElementById("num1").value)
+	 let b = parseInt(document.getElementById("num2").value)
+	 let c = parseInt(document.getElementById("num3").value)
+	
+	// Business Logic 
+	if(a<b){
+	 a = b
+	}
+	if(a<c){
+	 a = c
+	}
+	
+	//Presentation Logic
+	document.getElementById("result").innerHTML = "<b>Higest number is "+a+"</b>"
+	 
+	}
+  </script>
+</body>
+</html>
