@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>If-else</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      text-align: center;
+    }
+    input {
+      padding: 8px;
+      margin: 5px;
+      width: 200px;
+      text-align: left;
+    }
+    button {
+      padding: 8px 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>WAP in which accept a number and check it is an even number or odd number</h2>
+
+  <form>
+    <input type="number" id="num1" placeholder="Enter first number" required>
+    <button type="button" onclick="chkEvenOdd()"> Check	</button>
+  </form>
+
+  <div id="result">Result</div>
+
+  <script>
+  function chkEvenOdd(){
+	let num = parseInt(document.getElementById("num1").value)
+	if(num%2 == 0){
+		document.getElementById("result").innerHTML = "This is even number"
+	}else{
+		document.getElementById("result").innerHTML = "This is odd number"
+	} 
+  }
+  </script>
+</body>
+</html>
