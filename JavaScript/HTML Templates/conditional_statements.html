@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If-Else Flow Visualizer</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #eef2f3, #8e9eab);
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      width: 320px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .desc {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 80%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .flow {
+      margin-top: 10px;
+      text-align: left;
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.6;
+      background-color: #f7f9fb;
+      border-radius: 8px;
+      border-left: 4px solid #007bff;
+      position: relative;
+      font-family: 'Courier New', monospace;
+      white-space: pre-line;
+    }
+
+    .flow span {
+      display: inline-block;
+      margin-right: 5px;
+      opacity: 0.3;
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .flow .active {
+      opacity: 1;
+      font-weight: bold;
+      color: #007bff;
+      transform: scale(1.05);
+    }
+
+    .arrow {
+      display: inline-block;
+      animation: blink 1s infinite;
+      opacity: 0;
+    }
+
+    @keyframes blink {
+      50% { opacity: 1; }
+    }
+
+    .output {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+      transition: color 0.4s;
+    }
+
+    .success { color: #28a745; }
+    .fail { color: #dc3545; }
+  </style>
+</head>
+<body>
+
+  <!-- Simple If -->
+  <div class="card">
+    <h3>Simple If</h3>
+    <div class="desc">Condition: Check if number is positive</div>
+    <input type="number" id="ifInput" placeholder="Enter a number">
+    <button onclick="runIf()">Run</button>
+
+    <div class="flow" id="ifFlow">
+if (num > 0) { <span id="ifCond"></span>  
+    <span id="ifTrue">console.log("Number is Positive");</span>  
+}  
+ 
+    <span id="ifElse">Nothing happens</span>  
+
+    </div>
+
+    <div class="output" id="ifOutput">Result will appear here...</div>
+  </div>
+
+  <!-- If Else -->
+  <div class="card">
+    <h3>If - Else</h3>
+    <div class="desc">Condition: Check if number is even or odd</div>
+    <input type="number" id="ifElseInput" placeholder="Enter a number">
+    <button onclick="runIfElse()">Run</button>
+
+    <div class="flow" id="ifElseFlow">
+if (num % 2 == 0) { <span id="ieCond"></span>  
+    <span id="ieTrue">console.log("Even Number");</span>  
+}  
+else {  
+    <span id="ieElse">console.log("Odd Number");</span>  
+}
+    </div>
+
+    <div class="output" id="ifElseOutput">Result will appear here...</div>
+  </div>
+
+  <!-- Multiple If -->
+  <div class="card">
+    <h3>Multiple If (Else If)</h3>
+    <div class="desc">Condition: Check Positive, Negative, or Zero</div>
+    <input type="number" id="multiInput" placeholder="Enter a number">
+    <button onclick="runMultiIf()">Run</button>
+
+    <div class="flow" id="multiFlow">
+if (num > 0) { <span id="m1"></span>  
+    <span>console.log("Positive");</span>  
+}  
+else if (num < 0) { <span id="m2"></span>  
+    <span>console.log("Negative");</span>  
+}  
+else { <span id="m3"></span>  
+    <span>console.log("Zero");</span>  
+}
+    </div>
+
+    <div class="output" id="multiOutput">Result will appear here...</div>
+  </div>
+
+  <!-- Nested If -->
+  <div class="card">
+    <h3>Nested If</h3>
+    <div class="desc">Condition: Check Grade from Marks</div>
+    <input type="number" id="nestedInput" placeholder="Enter marks (0-100)">
+    <button onclick="runNestedIf()">Run</button>
+
+    <div class="flow" id="nestedFlow">
+if (marks >= 0 && marks <= 100) { <span id="n1"></span>  
+    if (marks >= 90) { <span id="n2"></span>  
+        console.log("Grade A+");  
+    }  
+    else if (marks >= 75) { <span id="n3"></span>  
+        console.log("Grade A");  
+    }  
+    else if (marks >= 50) { <span id="n4"></span>  
+        console.log("Grade B");  
+    }  
+    else { <span id="n5"></span>  
+        console.log("Fail");  
+    }  
+}  
+else {  
+    console.log("Invalid Marks");  
+}
+    </div>
+
+    <div class="output" id="nestedOutput">Result will appear here...</div>
+  </div>
+
+  <script>
+    // Utility function to highlight flow
+    function highlight(flowIds, activeId) {
+      flowIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('active');
+      });
+      const activeEl = document.getElementById(activeId);
+      if (activeEl) activeEl.classList.add('active');
+    }
+
+    // Simple If
+    function runIf() {
+      const num = parseFloat(document.getElementById('ifInput').value);
+      const output = document.getElementById('ifOutput');
+      const flowIds = ['ifCond', 'ifTrue', 'ifElse'];
+      highlight(flowIds, 'ifCond');
+      setTimeout(() => {
+        if (num > 0) {
+          highlight(flowIds, 'ifTrue');
+          output.innerText = `${num} is Positive ✅`;
+          output.className = 'output success';
+        } else {
+          highlight(flowIds, 'ifElse');
+          output.innerText = `${num} is not greater than 0 ❌`;
+          output.className = 'output fail';
+        }
+      }, 600);
+    }
+
+    // If Else
+    function runIfElse() {
+      const num = parseFloat(document.getElementById('ifElseInput').value);
+      const output = document.getElementById('ifElseOutput');
+      const flowIds = ['ieCond', 'ieTrue', 'ieElse'];
+      highlight(flowIds, 'ieCond');
+      setTimeout(() => {
+        if (num % 2 === 0) {
+          highlight(flowIds, 'ieTrue');
+          output.innerText = `${num} is Even 🔹`;
+          output.className = 'output success';
+        } else {
+          highlight(flowIds, 'ieElse');
+          output.innerText = `${num} is Odd 🔸`;
+          output.className = 'output fail';
+        }
+      }, 600);
+    }
+
+    // Multiple If
+    function runMultiIf() {
+      const num = parseFloat(document.getElementById('multiInput').value);
+      const output = document.getElementById('multiOutput');
+      const flowIds = ['m1', 'm2', 'm3'];
+      highlight(flowIds, 'm1');
+      setTimeout(() => {
+        if (num > 0) {
+          highlight(flowIds, 'm1');
+          output.innerText = `Positive 🟢`;
+          output.className = 'output success';
+        } else if (num < 0) {
+          highlight(flowIds, 'm2');
+          output.innerText = `Negative 🔴`;
+          output.className = 'output fail';
+        } else {
+          highlight(flowIds, 'm3');
+          output.innerText = `Zero 🟡`;
+          output.className = 'output success';
+        }
+      }, 600);
+    }
+
+    // Nested If
+    function runNestedIf() {
+      const marks = parseFloat(document.getElementById('nestedInput').value);
+      const output = document.getElementById('nestedOutput');
+      const flowIds = ['n1','n2','n3','n4','n5'];
+      highlight(flowIds, 'n1');
+      setTimeout(() => {
+        if (marks >= 0 && marks <= 100) {
+          if (marks >= 90) {
+            highlight(flowIds, 'n2');
+            output.innerText = `Grade A+ 🌟`;
+            output.className = 'output success';
+          } else if (marks >= 75) {
+            highlight(flowIds, 'n3');
+            output.innerText = `Grade A 👍`;
+            output.className = 'output success';
+          } else if (marks >= 50) {
+            highlight(flowIds, 'n4');
+            output.innerText = `Grade B 🙂`;
+            output.className = 'output success';
+          } else {
+            highlight(flowIds, 'n5');
+            output.innerText = `Fail ❌`;
+            output.className = 'output fail';
+          }
+        } else {
+          output.innerText = "❗ Marks must be between 0 and 100";
+          output.className = 'output fail';
+        }
+      }, 600);
+    }
+  </script>
+</body>
+</html>

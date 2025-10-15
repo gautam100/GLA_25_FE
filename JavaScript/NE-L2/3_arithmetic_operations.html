@@ -35,32 +35,36 @@
     <button type="button" onclick="doAdd()">Add</button>
   </form>
 
-  <div id="result"></div>
+  <div id="result">Result</div>
 
   <script>
     	function doAdd(){
 		let a = parseInt(document.getElementById("num1").value)
 		let b = parseInt(document.getElementById("num2").value)
 		sum = 0
-		if(validation(a,b)){
-			sum = a+b
-		}
-		document.getElementById("result").innerHTML = "Add is :"+sum
-	}
-	function validation(first_num="",second_num=""){
-		debugger;
-		if(first_num === NaN){
+		// ~~~~~~~~~~~~~~~ validtion code ~~~~~~~~~~~~~~~~~~~~~~
+		if(!Number.isInteger(a)){
 			alert("Enter First number!!");
 			document.getElementById("num1").focus();
-			return false;
+			a = 0;
+			
 		}
-		if(second_num === NaN){
+		if(!Number.isInteger(b)){
 			alert("Enter Second number!!");
 			document.getElementById("num2").focus();
-			return false;
+			b = 0;
+		
 		}
-		return true;
+		// ~~~~~~~~~~~~~~~ validtion code ~~~~~~~~~~~~~~~~~~~~~~
+		sum = a+b;
+		document.getElementById("result").innerHTML = "Add is :"+sum
+		
+
+
+		
 	}
+
+	
   </script>
 </body>
 </html>

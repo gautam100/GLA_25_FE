@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Loop Visualizer</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    width: 450px;
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    overflow-x: auto;
+    position: relative;
+  }
+
+  .highlight {
+    background-color: rgba(255, 255, 0, 0.3);
+    transition: background-color 0.3s ease;
+  }
+
+  .output {
+    margin-top: 15px;
+    padding: 12px;
+    background: #eef6ff;
+    border-left: 4px solid #007bff;
+    border-radius: 6px;
+    font-family: monospace;
+    min-height: 40px;
+  }
+
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  button:hover {
+    background: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h2>For Loop Flow Visualization</h2>
+  <pre id="code">
+<span id="init">for (let i = 0;</span> 
+<span id="condition">i &lt; 5;</span> 
+<span id="increment">i++) {</span>
+    <span id="body">console.log("i =", i);</span>
+}
+  </pre>
+  <button onclick="runLoop()">Run Visualization</button>
+  <div class="output" id="output">Output will appear here...</div>
+</div>
+
+<script>
+async function runLoop() {
+  const steps = [
+    { id: "init", text: "Initializing i = 0" },
+    { id: "condition", text: "Checking condition (i < 5)" },
+    { id: "body", text: "Executing loop body: console.log(i)" },
+    { id: "increment", text: "Incrementing i" }
+  ];
+
+  const output = document.getElementById("output");
+  output.innerHTML = "";
+  let i;
+
+  function highlight(id) {
+    document.querySelectorAll(".highlight").forEach(el => el.classList.remove("highlight"));
+    const el = document.getElementById(id);
+    if (el) el.classList.add("highlight");
+  }
+
+  // Step 1: Initialization
+  highlight("init");
+  output.innerHTML += "Initializing i = 0<br>";
+  await delay(1000);
+  i = 0;
+
+  while (true) {
+    // Step 2: Condition check
+    highlight("condition");
+    output.innerHTML += `Checking condition (i < 5) → ${i < 5}<br>`;
+    await delay(1000);
+
+    if (i >= 5) {
+      output.innerHTML += "Condition false → Loop ends.<br>";
+      highlight(null);
+      break;
+    }
+
+    // Step 3: Loop body
+    highlight("body");
+    output.innerHTML += `Inside loop → i = ${i}<br>`;
+    await delay(1000);
+
+    // Step 4: Increment
+    highlight("increment");
+    output.innerHTML += "Incrementing i<br>";
+    await delay(1000);
+    i++;
+  }
+
+  document.querySelectorAll(".highlight").forEach(el => el.classList.remove("highlight"));
+}
+
+function delay(ms) {
+  return new Promise(res => setTimeout(res, ms));
+}
+</script>
+
+</body>
+</html>
