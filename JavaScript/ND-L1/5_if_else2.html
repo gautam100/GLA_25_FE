@@ -8,18 +8,24 @@
     <div id="result"></div>
     <script>
       function chkHigherNumber() {
+        //debugger;
         let age = document.getElementById("num1").value;
         let isError = false;
+
         if (age == "") {
           document.getElementById("result").innerHTML = "Please enter number";
           document.getElementById("num1").style.border = "1px solid red";
           document.getElementById("result").style.color = "red";
           isError = true;
-          return false;
+          //return false;
         } else {
-          if (isError == false) {
-            document.getElementById("num1").style.border = "1px solid #000";
-            document.getElementById("result").style.color = "#000";
+          if (age < 1 || age > 101) {
+            document.getElementById("result").innerHTML =
+              "Entered number is invalid";
+            document.getElementById("num1").style.border = "1px solid red";
+            document.getElementById("result").style.color = "red";
+            isError = true;
+            return false;
           }
           if (age >= 18) {
             document.getElementById("result").innerHTML =
@@ -27,6 +33,10 @@
           } else {
             document.getElementById("result").innerHTML =
               "You are not eligible for Vote";
+          }
+          if (isError == false) {
+            document.getElementById("num1").style.border = "1px solid #000";
+            document.getElementById("result").style.color = "#000";
           }
         }
       }
