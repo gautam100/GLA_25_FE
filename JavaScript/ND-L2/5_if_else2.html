@@ -1,0 +1,35 @@
+<html>
+  <head> </head>
+  <body>
+    <input type="number" id="num1" placeholder="Enter first number" />
+    <br />
+    <input type="button" id="btn" value="Check" onclick="chkHigherNumber()" />
+
+    <div id="result"></div>
+    <script>
+      function chkHigherNumber() {
+        let age = document.getElementById("num1").value;
+        let isError = false;
+        if (age == "") {
+          document.getElementById("result").innerHTML = "Please enter number";
+          document.getElementById("num1").style.border = "1px solid red";
+          document.getElementById("result").style.color = "red";
+          isError = true;
+          return false;
+        } else {
+          if (isError == false) {
+            document.getElementById("num1").style.border = "1px solid #000";
+            document.getElementById("result").style.color = "#000";
+          }
+          if (age >= 18) {
+            document.getElementById("result").innerHTML =
+              "You are Eligible for Vote";
+          } else {
+            document.getElementById("result").innerHTML =
+              "You are not eligible for Vote";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

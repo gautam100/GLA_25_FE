@@ -16,8 +16,10 @@
 		let b = parseInt(document.getElementById("num2").value)
 		if(a>b){
 			document.getElementById("result").innerHTML = a+" is greater";	
-		}else{
+		}else if(a<b){
 			document.getElementById("result").innerHTML = b+" is greater";
+		}else{
+			document.getElementById("result").innerHTML = "both are equal number";
 		}
 	}
 	</script>

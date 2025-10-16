@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Theme Selector</title>
+</head>
+<body>
+  <h2>Choose Theme</h2>
+  <select id="themeSelect" onchange="changeTheme()">
+    <option value="">Select Theme</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+    <option value="blue">Blue</option>
+  </select>
+
+  <p id="message"></p>
+
+  <script>
+    function changeTheme() {
+      let theme = document.getElementById("themeSelect").value;
+      let message;
+      let body = document.body;
+
+      switch (theme) {
+        case "light":
+          body.style.backgroundColor = "white";
+          body.style.color = "black";
+          message = "Light theme applied 🌞";
+          break;
+        case "dark":
+          body.style.backgroundColor = "black";
+          body.style.color = "white";
+          message = "Dark theme applied 🌙";
+          break;
+        case "blue":
+          body.style.backgroundColor = "#007bff";
+          body.style.color = "white";
+          message = "Blue theme applied 💙";
+          break;
+        default:
+          message = "Please select a theme.";
+      }
+
+      document.getElementById("message").innerText = message;
+    }
+  </script>
+</body>
+</html>
