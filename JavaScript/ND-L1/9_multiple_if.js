@@ -1,11 +1,11 @@
 function generateReportCard(){
     //debugger;
-    let eng = parseInt(document.getElementById("sub1").value)
-    let math = parseInt(document.getElementById("sub2").value)
-    let sci = parseInt(document.getElementById("sub3").value)
+    let eng = parseInt(document.getElementById("sub1").value)||0
+    let math = parseInt(document.getElementById("sub2").value)||0
+    let sci = parseInt(document.getElementById("sub3").value)||0
 
     let total = 0, percentage=0, grade=undefined;
-    if(isNaN(eng)){
+    /*if(isNaN(eng)){
         eng = 0
     }
     if(isNaN(math)){
@@ -13,7 +13,7 @@ function generateReportCard(){
     }
     if(isNaN(sci)){
         sci = 0
-    }
+    }*/
     total = eng + math + sci
     percentage = total/300*100
     document.getElementById("total").innerHTML = "<b>Totak Marks:"+total+"</b>" 
