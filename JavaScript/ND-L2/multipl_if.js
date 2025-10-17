@@ -21,7 +21,7 @@ function calculateTotal() {
     percentage = total/300 *100
 
     document.getElementById("total_marks").innerHTML = "Total:"+total;
-    document.getElementById("percentage").innerHTML = "Percentage:"+percentage.toFixed(2);
+    document.getElementById("percentage").innerHTML = "Percentage:"+percentage.toFixed(2)``;
 
     if(percentage >=75){
         grade = "A"

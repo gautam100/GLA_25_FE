@@ -1,0 +1,58 @@
+
+<html>
+<head>
+
+</head>
+<body>
+	<select id="weekday" onchange="chkWeekday()">
+        <option value="">Select Day</option>
+        <option value="mon">Monday</option>
+		<option value="tue">Tuesday</option>
+		<option value="wed">Wednesday</option>
+		<option value="thrus">Thrus</option>
+		<option value="fri">Friday</option>
+	</select>
+	
+	
+
+	<div id="result_container">result..</div>
+
+	<script>
+	function chkWeekday(){
+		let weekday = document.getElementById("weekday").value
+		let result = ""
+		if(weekday == "mon"){
+			console.log("First day")
+			result = "First day"
+		}
+        else if(weekday == "tue"){
+			console.log("second day")
+			result = "second day"
+		}
+        else if(weekday == "wed"){
+			console.log("third day")
+			result = "third day"
+		}
+        else if(weekday == "thrus"){
+			console.log("Fourth day")
+			result = "Fourth day"
+		}
+        else if(weekday == "fri"){
+			console.log("Fifth day")
+			result = "Fifth day"
+		}
+        else{
+			console.log("Invalid entry!")
+			result = "Invalid entry!"
+		}
+
+
+		document.getElementById("result_container").innerHTML = "<strong>"+result+"</strong>"
+	}
+	</script>
+</body>
+</html>
+
+
+
+
