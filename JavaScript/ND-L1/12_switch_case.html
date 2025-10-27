@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <input type="number" id="num1" placeholder="Enter first Number " />
+        <br />
+        <input type="number" id="num2" placeholder="Enter second Number " />
+        <br />
+        <button id="add_btn" onclick="arithmeticOper('add')">Add</button>
+        <button id="sub_btn" onclick="arithmeticOper('sub')">Sub</button>
+        <button id="mul_btn" onclick="arithmeticOper('mul')">Multiply</button>
+        <div id="result"></div>
+        <script>
+            function arithmeticOper(action){
+                let a = parseInt(document.getElementById("num1").value)
+                let b = parseInt(document.getElementById("num2").value)
+
+                switch(action){
+                    case 'add': document.getElementById("result").innerHTML = a+b
+                    break;
+
+                    case 'sub': document.getElementById("result").innerHTML = a-b
+                    break;
+
+                    case 'mul': document.getElementById("result").innerHTML = a*b
+                    break;
+
+                    default: document.getElementById("result").innerHTML = "Invalid Data!"
+                }
+            }
+        </script>
+    </body>
+</html>

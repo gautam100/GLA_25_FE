@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <select id="day_num" onchange="prnWeekDay()">
+            <option value="">--Select--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+        <div id="result"></div>
+        <script>
+            function prnWeekDay(){
+                var num = parseInt(document.getElementById("day_num").value)
+                var resultContainer = document.getElementById("result")
+                
+                if(num === 1){
+                    resultContainer.innerHTML = "Monday"
+                }else if(num === 2){
+                    resultContainer.innerHTML = "Tuesday"
+                }else if(num === 3){
+                    resultContainer.innerHTML = "Wednesday"
+                }else if(num === 4){
+                    resultContainer.innerHTML = "Thrusday"
+                }else if(num === 5){
+                    resultContainer.innerHTML = "Friday"
+                }else if(num === 6){
+                    resultContainer.innerHTML = "Saturday"
+                }else if(num === 7){
+                    resultContainer.innerHTML = "Sunday"
+                }else{
+                    resultContainer.innerHTML = "Invalid input!!"
+
+                }  
+            }//function
+        </script>
+    </body>
+</html>

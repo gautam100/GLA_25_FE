@@ -8,9 +8,9 @@ if-else --- difference between == and ===
 
 Multiple if -- print monday for 1, tuesday for 2 ...
 
-------------------------------------------
-
 Multiple if --- Report card
+
+------------------------------------------
 
 Nested if --- 
 
