@@ -1,0 +1,51 @@
+<!--
+- WAP to create report card and print Grade according to percentage marks. User will enter marks of English, Science and Math.
+Find total. calculate percentage (obtained marks/total marks) * 100 and then print grade. 
+percentage > 75 then Grade A
+percentage > 60 then Grade B
+percentage > 45 then Grade C
+percentage < 45	then Fail!
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Report card</title>
+    </head>
+    <body>
+        <input type="number" placeholder="English marks" id="eng" onchange="calculateResult()" />
+        <input type="number" placeholder="Sci marks" id="sci" onchange="calculateResult()" />
+        <input type="number" placeholder="Math marks" id="math" onchange="calculateResult()" />
+
+        <div id="total">Total: </div>
+        <div id="percentage">Percentage: </div>
+        <div id="Grade">Grade: </div>
+
+        <script>
+            function calculateResult(){
+                let eng, sci, math, total, percentage, grade;
+                
+                eng = parseInt(document.getElementById("eng").value) || 0
+                sci = parseInt(document.getElementById("sci").value) || 0
+                math = parseInt(document.getElementById("math").value) || 0
+                
+                total = eng + sci + math
+                document.getElementById("total").innerHTML="<strong>Total:"+total+"</strong>"
+
+                percentage = total/300 *100
+                document.getElementById("percentage").innerHTML = "<strong>Percentage:"+percentage.toFixed(2)+"</strong>"
+
+                if(percentage>=75){
+                    grade = "Grade A"
+                }else if(percentage>=60 && percentage <=74) {
+                    grade = "Grade B"
+                }else if(percentage>=45 && percentage <= 59){
+                    grade = "Grade C"
+                }else{
+                    grade = "Fail!"
+                }
+                document.getElementById("Grade").innerHTML = "<strong>"+grade+"</strong>"
+
+            }
+        </script>
+    </body>
+</html>
