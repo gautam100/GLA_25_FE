@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <select id="day_num" onchange="prnWeekDay()">
+            <option value="">--Select--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+        <div id="result"></div>
+        <script>
+            function prnWeekDay(){
+                var num = parseInt(document.getElementById("day_num").value)
+                var resultContainer = document.getElementById("result")
+                if(isNaN(num)){
+                    alert("Select drop down")
+                    //return "kuch choose karo"
+                    return false
+                }
+                switch(num){
+                    case 1: 
+                    resultContainer.innerHTML = "<h1>Monday</h1>"
+                    break
+
+                    case 2: 
+                    resultContainer.innerHTML = "<h1>Tuesday</h1>"
+                    break
+                    
+                    case 3: 
+                    resultContainer.innerHTML = "<h1>Wednesday</h1>"
+                    break
+                    
+                    case 4: 
+                    resultContainer.innerHTML = "<h1>Thrusday</h1>"
+                    break
+                    
+                    case 5: 
+                    resultContainer.innerHTML = "<h1>Friday</h1>"
+                    break
+                    
+                    case 6: 
+                    resultContainer.innerHTML = "<h1>Saturday</h1>"
+                    break
+                    
+                    case 7: 
+                    resultContainer.innerHTML = "<h1>Sunday</h1>"
+                    break
+
+                    default:
+                    resultContainer.innerHTML ="Invalid entry"
+
+                }
+                  
+            }//function
+        </script>
+    </body>
+</html>

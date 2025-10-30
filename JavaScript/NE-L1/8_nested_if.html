@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <input type="number" id="user_age" placeholder="Enter Age" />
+        <select id="user_gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <button onclick="partyDrink()">Click</button>
+        <div id="result"></div>
+        <script>
+            function partyDrink(){
+                var age = document.getElementById("user_age").value
+                var gender = document.getElementById("user_gender").value
+                if(age>=18){
+                    if(gender === "male"){
+                        document.getElementById("result").innerHTML = "<h1>Enjoy your Mojito!</h1>"
+                    }else if(gender === "female"){
+                        document.getElementById("result").innerHTML = "<h1>Enjoy your Leamon water!</h1>"
+                    }else{
+                    document.getElementById("result").innerHTML = "<h1>Pls select gender!</h1>"
+                    }
+                }else{
+                    document.getElementById("result").innerHTML = "<h1>Enjoy your coke!</h1>"
+                }
+            } 
+        </script>
+    </body>
+</html>

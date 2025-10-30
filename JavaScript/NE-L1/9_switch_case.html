@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div id="parent">
+      <select id="drop_down" onchange="displayCityName()">
+        <option value="">--Select Country--</option>
+        <option value="IN">India</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="AUS">Australia</option>
+        <option value="SA">South Africa</option>
+      </select>
+      <div id="result">....</div>
+    </div>
+
+    <script>
+      function displayCityName() {
+        let country = document.getElementById("drop_down").value;
+        switch (country) {
+          case "IN":
+            document.getElementById("result").innerHTML =
+              "<h1>New Delhi is the capital city of India</h1>";
+            break;
+
+          case "USA":
+            document.getElementById("result").innerHTML =
+              "<h1>Largest economy of world!</h1>";
+            break;
+
+          case "UK":
+            document.getElementById("result").innerHTML = "<h1>London!</h1>";
+            break;
+
+          case "AUS":
+            document.getElementById("result").innerHTML = "<h1>Sydney!</h1>";
+            break;
+
+          case "SA":
+            document.getElementById("result").innerHTML = "<h1>Cape Town!</h1>";
+            break;
+
+          default:
+            document.getElementById("result").innerHTML =
+              "<h1>Invalid Input!!!</h1>";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -23,7 +23,7 @@ percentage < 45	then Fail!
         <script>
             function calculateResult(){
                 let eng, sci, math, total, percentage, grade;
-                
+
                 eng = parseInt(document.getElementById("eng").value) || 0
                 sci = parseInt(document.getElementById("sci").value) || 0
                 math = parseInt(document.getElementById("math").value) || 0
@@ -32,7 +32,7 @@ percentage < 45	then Fail!
                 document.getElementById("total").innerHTML="<strong>Total:"+total+"</strong>"
 
                 percentage = total/300 *100
-                document.getElementById("percentage").innerHTML = "<strong>Percentage:"+percentage.toFixed(2)+"</strong>"
+                document.getElementById("percentage").innerHTML = "<strong>Percentage:"+percentage.toFixed(3)+"</strong>"
 
                 if(percentage>=75){
                     grade = "Grade A"
