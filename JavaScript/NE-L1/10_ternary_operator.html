@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body >
+        
+        <input type="number" id='num' placeholder="Enter a no.">
+        <button type="button" id="btn" onclick="oddEven()">Check</button>
+        <div id="result"></div>
+        <script>
+            function oddEven(){
+                let num = document.getElementById("num").value
+                let result = (num%2 === 0)? "Even Number": "Odd Number"
+                document.getElementById("result").innerHTML = "<h1>"+result+"<h1>";
+            }
+        </script>
+    </body>
+</html>
