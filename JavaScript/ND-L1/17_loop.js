@@ -1,5 +1,7 @@
+var readlineSync = require('readline-sync');
+
 function checkPrimeNum(){
-    num = 8
+    var num = readlineSync.question('Enter Number: ');
     isPrime = true;
     for(i=2;i<num;i++){
         if(num%i === 0){
