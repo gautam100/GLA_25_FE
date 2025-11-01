@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .box1{height: 160px; border:1px solid #000; padding:10px;}
+            .box2{height: 100px; border:1px solid #000; padding:10px;}
+            .box3{height: 40px; border:1px solid #000; padding:10px;}
+
+        </style>
+    </head>
+    <body>
+        <h1>Event Bubbling</h1>
+        <div id="parent" class="box1">
+            Parent
+            <div id="child" class="box2">
+                child
+                <div id="grand_child" class="box3">
+                    Grand Child
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            let parent = document.getElementById("parent")
+            let child = document.getElementById("child")
+            let grandChild = document.getElementById("grand_child")
+
+            
+            let parentFunc = function(){
+                alert("I'm inside Parent function")
+            }
+
+            parent.addEventListener("click",parentFunc)
+            
+            child.addEventListener("click",function(){
+                alert("I am inside child function")
+            })
+            grandChild.addEventListener("click",function(){
+                alert("I am inside grandChild function")
+            })
+
+        
+            /*
+            let child = function(){
+                alert("I'm inside child function")
+            }
+            let grandChild = function(e){
+                e.stopPropagation()
+                alert("I'm inside grandChild function")
+            }*/
+        </script>
+    </body>
+</html>
