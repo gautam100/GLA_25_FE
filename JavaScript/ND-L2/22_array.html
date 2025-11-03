@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>WAP in which accept values in an array from HTML.</p>
+        </div>
+      </div>
+
+      <div class="row border border=primary">
+        <div class="col-md-6">
+          <input type="text" id="num" placeholder="Enter value in array.." />
+          <button class="btn btn-success" onclick="generateArr()">Add!</button>
+        </div>
+        <div class="col-md-6" id="result">Result:</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <button class="btn btn-danger" onclick="sumOfArr()">
+            Calculate Sum
+          </button>
+        </div>
+        <div class="col-md-10" id="array_sum"></div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-md-2">
+          <button class="btn btn-danger" onclick="evenOddCounter()">
+            Count Even Odd 
+        </button>
+        </div>
+        <div class="col-md-10" id="even_odd"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let generateArr = function () {
+        let elem = document.getElementById("num").value;
+        let myArr = [];
+        myArr.push(elem);
+        console.log(myArr);
+        document.getElementById("result").innerHTML += myArr.toString() + " ";
+      };
+
+      var arr = [];
+      let sumOfArr = function () {
+        //let arr = [10, 20, 30, 40, 15, [10,20,30]]
+        arr.push(parseFloat(document.getElementById("num").value));
+        let sum = 0;
+        /*for(let i=0;i<arr.length; i++){
+            sum = sum + arr[i]
+        }*/
+        console.log("Length is:", arr.length);
+        for (let i of arr) {
+          sum = sum + i;
+        }
+        document.getElementById("array_sum").innerHTML = "<h1>" + sum + "<h1>";
+      };
+
+      let evenOddCounter = function () {
+        let arr = [20, 23, 56, 55, 67];
+        evenCounter = 0;
+        oddCounter = 0;
+        for (let temp of arr) {
+          if (temp % 2 === 0) {
+            evenCounter++
+          }else{
+            oddCounter++
+          }
+        }
+        console.log("Total Even Numbers: ",evenCounter)
+        console.log("Total Odd Numbers: ",oddCounter)
+
+        document.getElementById("even_odd").innerHTML = "Total Even Nos:"+evenCounter
+        document.getElementById("even_odd").innerHTML += "<br>Total Odd Nos:"+oddCounter
+
+      };
+    </script>
+  </body>
+</html>

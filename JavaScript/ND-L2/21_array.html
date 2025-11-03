@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>
-    <body onload="myFunc()">
-        <div>
-            <h1 class="text-success">Hello</h1>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        <script>
-            let myFunc = function(){
-                let arr = [12,5,"Raj",true, 5.5] //short hand
-                //let arr2 = new Array("Rohit",100,true) //Constructor
-                let a =10;
-                console.log(arr[0])//12
-                console.log(arr[1])//5
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body onload="myFunc()">
+    <div>
+      <h1 class="text-success">Hello</h1>
+      <select id="country_dd"></select>
+    </div>
+    <div id="result"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let myFunc = function () {
+        let arr = [5, 50, 100, 30, 20, "Raj", true, 10.5]; //short hand
+        console.log(typeof arr); //object
 
-            }
-        </script>
-    </body>
+        for (let i = 0; i < arr.length; i++) {
+          document.getElementById("result").innerHTML += arr[i] + " ";
+        }
+
+        let countryArr = ["India", "USA", "UK", "AUS","NZ"];
+        for (let i = 0; i < countryArr.length; i++) {
+          document.getElementById("country_dd").innerHTML +=
+            "<option value='" + i + "'>" + countryArr[i] + "</option>";
+        }
+      };
+    </script>
+  </body>
 </html>

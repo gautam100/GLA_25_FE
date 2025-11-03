@@ -1,0 +1,54 @@
+1) Document, window
+2) DOM
+3) Events (onclick, onload, onmouseover, onkeyup etc.)
+4) Conditional Statement
+ - if
+ - if-else
+ - multiple if
+ - nested if
+ - switch case
+ - Ternary operator
+5) Loops
+ - for
+ - while
+ - do while
+
+*) break & continue
+
+6) functions
+ - Named function
+ - Anonymous function
+ - Arrow function
+
+7) Run JS code in browser also outside of browser (terminal) using node
+
+------------------------------------------------------------------------
+- Function scope
+- Hoisting
+- Event Bubbling
+
+- Array
+ > for-of (Loop)
+
+- Object
+ > for-in (Loop)
+
+- Asynchronous Programming
+  > callback
+  > promise (Call API)
+  > Async Await
+
+- Import & Export
+------------------------------------------------------------------------
+*Higher Order Function
+*Closure
+*Curry
+
+Class & Object 
+Constructor
+super
+Prototype
+Private properties and methods
+Inheritance
+static methods
+polymorphism
