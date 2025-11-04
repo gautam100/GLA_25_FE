@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="first_num" class="xyz" placeholder="Enter first number" value="10" />
+            <input type="text" id="second_num" class="xyz" placeholder="Enter second number" value="12" />
+            <button onclick="doAdd()" class="box"> Add </button>
+            <div id="result_box"> Result will display here </div>
+        </div>
+        <script>
+            function doAdd(){
+                let a = parseFloat(document.querySelector("#first_num").value)
+                let b = parseFloat(document.querySelector("#second_num").value)
+
+                document.querySelector("#result_box").innerHTML = a+b
+            }
+        </script>
+    </body>
+</html>

@@ -1,20 +1,9 @@
-if-else --- enter age and check eligiblity for vote [DONE]
+Array
 
-if-else & Multiple if --- compare two numbers and print the highest number. [DONE]
+String
 
-simple if -- print highest No. among 3 numbers 
+object
 
-if-else --- difference between == and ===
+Asynchronous Programming
 
-Multiple if -- print monday for 1, tuesday for 2 ...
-
-Multiple if --- Report card
-
-------------------------------------------
-
-Nested if --- 
-
-Switch case ---
-
-Ternary operator ---
-
+Import & Export
