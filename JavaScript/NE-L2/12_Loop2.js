@@ -24,7 +24,7 @@ function seriesOfNum() {
 seriesOfNum()
 //---------------------------------------
 function series2(){
-    debugger;
+    //debugger;
     for(let i=1;i<=25; i+=2){
         console.log(i)
         i--
