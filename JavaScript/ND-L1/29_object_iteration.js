@@ -1,0 +1,111 @@
+let prodCards = function () {
+  let products = [
+    {
+      id: 1,
+      name: "Leather Jacket",
+      category: "Jacket",
+      price: 5499,
+      brand: "Boat",
+      rating: 4.3,
+      inStock: true,
+      image: "https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/9/d/z/l-1-no-i-t-jacket-23-black-iandt-original-imahfcr55urfgrgx.jpeg?q=70",
+    },
+    {
+      id: 2,
+      name: "Men's Running Shoes",
+      category: "Footwear",
+      price: 3199,
+      brand: "Nike",
+      rating: 4.5,
+      inStock: true,
+      image: "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/i/w/0/6-snk-931-blu-6-bruton-blue-original-imaheqkydeqekazt.jpeg?q=70",
+    },
+    {
+      id: 3,
+      name: "Smartwatch with Heart Rate Monitor",
+      category: "Electronics",
+      price: 4999,
+      brand: "Noise",
+      rating: 4.2,
+      inStock: false,
+      image: "https://images.unsplash.com/photo-1603791452906-bc3ba1b1e6de",
+    },
+    {
+      id: 4,
+      name: "Women's Handbag",
+      category: "Fashion",
+      price: 1899,
+      brand: "Lavie",
+      rating: 4.1,
+      inStock: true,
+      image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+    },
+    {
+      id: 5,
+      name: "Gaming Mouse",
+      category: "Electronics",
+      price: 1499,
+      brand: "Logitech",
+      rating: 4.6,
+      inStock: true,
+      image: "https://images.unsplash.com/photo-1616627451470-5ef7c6b0c8a1",
+    },
+    {
+      id: 6,
+      name: "Casual Cotton T-Shirt",
+      category: "Clothing",
+      price: 799,
+      brand: "Puma",
+      rating: 4.0,
+      inStock: true,
+      image: "https://images.unsplash.com/photo-1586363104867-3be4a5c3fdd0",
+    },
+    {
+      id: 7,
+      name: "Wireless Keyboard and Mouse Combo",
+      category: "Electronics",
+      price: 2299,
+      brand: "HP",
+      rating: 4.4,
+      inStock: false,
+      image: "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9",
+    },
+    {
+      id: 8,
+      name: "LED Table Lamp",
+      category: "Home Decor",
+      price: 1299,
+      brand: "Philips",
+      rating: 4.1,
+      inStock: true,
+      image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+    },
+    {
+      id: 9,
+      name: "Backpack 30L",
+      category: "Accessories",
+      price: 1599,
+      brand: "American Tourister",
+      rating: 4.3,
+      inStock: true,
+      image: "https://images.unsplash.com/photo-1504280390368-3971f5463c98",
+    },
+    {
+      id: 10,
+      name: "Portable Power Bank 10000mAh",
+      category: "Electronics",
+      price: 1699,
+      brand: "Mi",
+      rating: 4.2,
+      inStock: true,
+      image: "https://images.unsplash.com/photo-1585386959984-a41552261c6f",
+    },
+  ];
+
+  
+  for (let prd of products) {
+    let innerhtml =
+    "<div style='float:left;margin:5px;'><div class='card' style='width: 18rem'><img src='"+prd.image+"' class='card-img-top' alt='' /><div class='card-body'><h5 class='card-title'>"+prd.name+"</h5><p class='card-text'><span class='badge bg-success'>&#8377; "+prd.price+"</span></p><a href='#' class='btn btn-primary'>Shopping</a></div></div></div>";
+    document.getElementById("prod_col").innerHTML += innerhtml;
+  }
+};

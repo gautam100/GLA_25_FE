@@ -8,7 +8,7 @@ var imgArray = [
 ];
 
 let slider = (pointer = 0) => {
-  console.log(pointer);
+  //console.log(pointer);
   if (pointer < imgArray.length) {
     document.getElementById("image-container").innerHTML =
       "<img src='" + imgArray[pointer] + "' />";
