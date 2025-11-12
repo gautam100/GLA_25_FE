@@ -13,7 +13,7 @@ function Xyz() {
 
   setTimeout(function () {
     console.log("Second Line");
-  }, 1000);
+  }, 2000);
 
   console.log("Third Line");
 }

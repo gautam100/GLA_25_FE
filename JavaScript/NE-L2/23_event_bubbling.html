@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Bubbling</title>
+        <style>
+            #parent{
+                height:400px; border:1px solid #000; margin: 10px; padding: 10px;
+            }
+            #child{
+                height:300px; border:1px solid #000; margin: 10px; padding: 10px;
+            }
+            #grand_child{
+                height:200px; border:1px solid #000; margin: 10px; padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Event Bubbling</h1>
+        <div id="parent" onclick="parentClicked()">
+            Parent
+            <div id="child" onclick="childClicked()">
+                Child
+                <div id="grand_child" onclick="grandChildClicked(event)">
+                    Grand Child
+                </div>
+            </div>
+        </div>
+        <script src="23_event_bubbling.js"></script>
+    </body>
+</html>
