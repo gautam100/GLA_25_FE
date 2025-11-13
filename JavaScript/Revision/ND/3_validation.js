@@ -27,7 +27,7 @@ let validation = function () {
   }
 
   // Email Validation
-  const pattern = /\S+@\S+\.\S+/;
+  const pattern = /\S+@\S+\.\S+/; // abc@yahoo.com
   if (document.querySelector("#email").value === "") {
     document.querySelector("#email_err").innerHTML =
       "Please Enter Email address!";
@@ -65,7 +65,7 @@ let validation = function () {
       "Password and confirm password should be same!";
     password.style.border = "2px solid red";
     isError = true;
-  }else{
+  }else{ 
     confirmPwd.style.border = "1px solid #000";
     document.getElementById("confirm_pwd_err").innerHTML = "";
   }

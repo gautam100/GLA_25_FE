@@ -1,12 +1,12 @@
 function waitAndPrint(message, delay) {
   return new Promise((resolve, reject) => {
     
-    let flag = true;
+    let flag = true;//Math.random() < 0.5
 
     if (flag === true) {
       setTimeout(function () {
         console.log(message); //One
-        resolve(); //this will call then
+        resolve(); //control will go to then()
       }, delay);
     }else{
       console.log("Promise Failed")
