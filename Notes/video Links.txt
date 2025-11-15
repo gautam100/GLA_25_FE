@@ -1,9 +1,1 @@
-
-HTML:
-https://orbus027-my.sharepoint.com/personal/chirag_orbus027_onmicrosoft_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fchirag_orbus027_onmicrosoft_com%2FDocuments%2FTraining+Recordings%2FPython+Full+Stack+HTD+Batch+-+2%2FPython+Full+Stack+HTD+Batch+2+Training+%2812%27th+Nov+-+830+pm+-+1130+pm+IST%29-20251113_174815UTC-Meeting+Recording.mp4&startedResponseCatch=true&referrer=StreamWebApp.Web&referrerScenario=AddressBarCopied.view.51af004c-9f65-4748-b700-d22d33114275
-
-CSS:
-https://orbus027-my.sharepoint.com/personal/chirag_orbus027_onmicrosoft_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fchirag_orbus027_onmicrosoft_com%2FDocuments%2FTraining+Recordings%2FPython+Full+Stack+HTD+Batch+-+2%2FPython+Full+Stack+HTD+Batch+2+Training+%2812%27th+Nov+-+830+pm+-+1130+pm+IST%29-20251112_175946UTC-Meeting+Recording.mp4&startedResponseCatch=true&referrer=StreamWebApp.Web&referrerScenario=AddressBarCopied.view.75687352-518f-4ede-95df-32776750280d
-
-JS #1:
-https://orbus027-my.sharepoint.com/personal/chirag_orbus027_onmicrosoft_com/_layouts/15/stream.aspx?id=%2Fpersonal%2Fchirag%5Forbus027%5Fonmicrosoft%5Fcom%2FDocuments%2FTraining%20Recordings%2FPython%20Full%20Stack%20HTD%20Batch%20%2D%202%2FPython%20Full%20Stack%20HTD%20Batch%202%20Training%20%2812%27th%20Nov%20%2D%20830%20pm%20%2D%201130%20pm%20IST%29%2D20251114%5F174238UTC%2DMeeting%20Recording%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E81199564%2Dea3b%2D4b32%2Da1b7%2Ddfea2cee6c57
+https://youtu.be/C91ulEA4PLo
