@@ -1,6 +1,6 @@
 function getData() {
   return new Promise((resolve, reject) => {
-    const url = "https://jsonplaceholder.typicode.com/todos/2"; //API Endpoint
+    const url = "https://jsonplaceholder.typicode.com/todos"; //API Endpoint
 
     //Make API call using fetch()
     fetch(url)
@@ -17,22 +17,24 @@ function getData() {
 }
 
 getData()
-  .then((result) => {
-    console.log("Title:", result.title);
-    console.log("Completed:", result.completed);
+  .then((serverResult) => {
+    console.log("Title:", serverResult.title);
+    console.log("Completed:", serverResult.completed);
 
-    let html = document.getElementById("tbody");
-    html = "<tr>";
-    html +=
-      "<td>" +
-      result.id +
-      "</td> <td>" +
-      result.title +
-      "</td> <td>" +
-      result.completed +
-      "</td>";
-    html += "</tr>";
-    document.getElementById("tbody").innerHTML = html
+    let html='';
+    for (let result of serverResult) {
+      html += "<tr>";
+      html +=
+        "<td>" +
+        result.id +
+        "</td> <td>" +
+        result.title +
+        "</td> <td>" +
+        result.completed +
+        "</td>";
+      html += "</tr>";
+    }
+    document.getElementById("tbody").innerHTML = html;
   })
   .catch((error) => {
     console.log("Error:", error);
