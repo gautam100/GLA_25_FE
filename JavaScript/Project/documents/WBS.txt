@@ -1,0 +1,47 @@
+Step 1: We need a question bank /database --- questions.json [promise]
+
+Step 2: A HTML page where there will be some introduction and a button at bottom which will allow user to enter in test portal
+
+Step 3: Write a function which will read questions.json and fetch 15 random question, options and correct answer. Our dataset will be available on a array of object.
+let dataSet = [
+	{
+	ques: "what is JS",
+	option1: "prog Lang"
+	option2: "Database",
+	option3: "Cloud Computing",
+	option4 : "Grpahics software",
+	correct_ans: "prog Lang",
+	},
+	{}...
+]
+ 
+Step 4: In the test portal, we will have a div in which by default we will show question and options available in index 0
+
+Step 5: when user will click on next button index will increase by 1 and the question and options which is available in
+next index that will display in the div (and vice versa with prev button click)
+
+Step 6: Create an object to store response of user.
+
+[
+ {
+  ques_no : 1,
+  ans : option1,
+  isCorrect: true	
+ },
+	{
+  ques_no : 2,
+  ans : option3,
+  isCorrect: false	
+ }
+ {},
+ {}...
+]
+
+Step 6: When user will submit the test then a new html page will display. In this page user can see the result.
+
+Step 7: (optional) In the same page we need to display correct answer of each question.
+
+
+
+
+  
