@@ -9,28 +9,32 @@
   </head>
   <body>
     <h1>Login Form</h1>
-    <table border="0" cellpadding="5" cellspacing="0">
-      <tr>
-        <td>Email Id</td>
-        <td>
-            <input type="email" id="user_email" />
-            <div id="email_err"> </div>
-        </td>
-      </tr>
-      <tr>
-        <td>Password</td>
-        <td>
-            <input type="password" id="user_pwd" />
-            <div id="pwd_err"> </div>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-            <button id="btn" onclick="chkValidation()">Login</button>
-        </td>
-      </tr>
-    </table>
+    <div style="width:400px; height:30px; border-radius:15px; background-color:yellow;display:none;" id="global_err">
 
+    </div>
+    <form>
+      <table border="0" cellpadding="5" cellspacing="0">
+        <tr>
+          <td>Email Id</td>
+          <td>
+            <input type="email" id="user_email" />
+            <div id="email_err"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td>
+            <input type="password" id="user_pwd" />
+            <div id="pwd_err"></div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button id="btn" onclick="return chkValidation()">Login</button>
+          </td>
+        </tr>
+      </table>
+    </form>
     <script src="form_validation.js"></script>
   </body>
 </html>

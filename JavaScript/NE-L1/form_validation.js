@@ -26,6 +26,8 @@ function chkValidation(){
     }
 
     if(isError === true){
+        document.getElementById("global_err").style.display = "block"
+        document.getElementById("global_err").innerHTML = "<h2>Error in form, please fill correct data!</h2>"
         return false
     }else{
         return true
