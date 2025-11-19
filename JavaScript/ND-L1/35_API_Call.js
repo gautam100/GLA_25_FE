@@ -20,8 +20,8 @@ getData()
   .then((serverResult) => {
     //console.log("Title:", serverResult.title);
     //console.log("Completed:", serverResult.completed);
-
-    let html='';
+    let html = "";
+    document.getElementById("tbody").innerHTML = html;
     for (let result of serverResult) {
       html += "<tr>";
       html +=
