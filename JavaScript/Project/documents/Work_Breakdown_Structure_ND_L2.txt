@@ -1,0 +1,37 @@
+#WBS: Work Breakdown Structure
+
+Step 1: We need to create a json file (questions.json) in which there will be 50 questions with options and answers.
+
+Step 2: We need to create a function which will fetch 15 random questions/records from the questions.json file  
+
+Step 3: We need to create html of landing page.
+
+Step 4: In the test page/ second page we will display one question at a time. for that we'll set a variable index=0 
+so that by default from the array of object which holds the question set, 0th index data will fetch and display
+
+Step 5: after answering, when user clicks on next button index will increase by one and next question will start to display
+in the div
+
+Step 6: To store user's response/answers, we should create one new object which have below keys
+[
+	{
+		ques_no:1,
+		ans_provided: 0
+		isCorrect: true
+	},
+	{
+		
+		ques_no:2,
+		ans_provided: 2
+		isCorrect: false
+	}
+	...
+
+] 
+
+Step 7: Create result page in which show the obtained marks, total correct answers and total incorrect answers.
+
+Step 8: (optional) We can show all questions with correct answers.
+
+
+

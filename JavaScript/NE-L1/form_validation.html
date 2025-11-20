@@ -9,9 +9,20 @@
   </head>
   <body>
     <h1>Login Form</h1>
-    <div style="width:400px; height:30px; border-radius:15px; background-color:yellow;display:none;" id="global_err">
-
-    </div>
+    <div
+      style="
+        width: 350px;
+        height: 40px;
+        border-radius: 15px;
+        background-color: yellow;
+        display: none;
+        border: 1px solid #f7ab13;
+        color: red;
+        text-align: center;
+        padding-top:8px;
+      "
+      id="global_err"
+    ></div>
     <form>
       <table border="0" cellpadding="5" cellspacing="0">
         <tr>
@@ -24,7 +35,7 @@
         <tr>
           <td>Password</td>
           <td>
-            <input type="password" id="user_pwd" />
+            <input type="password" id="user_pwd" minlength="5" maxlength="15" />
             <div id="pwd_err"></div>
           </td>
         </tr>

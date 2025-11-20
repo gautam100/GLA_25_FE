@@ -1,0 +1,18 @@
+.container {
+  margin: 0 auto;
+  width: 680px;
+  padding: 20px;
+  border: 0px solid #000;
+}
+.image-container {
+  width: 640px;
+  height: 427px;
+  background-color: #ebebeb;
+}
+.align-left{
+    float: left;
+}
+.align-right{
+    float: right;
+    margin-right: 39px;
+}
