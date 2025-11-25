@@ -1,0 +1,32 @@
+Step 1: We should have one question bank (questions.json) in which there will be 50 questions
+
+Step 2: we should have a function which will fetch random 15 questions from question bank and store those questions in a 
+array of object variable say quesData.
+
+Step 3: Create a landing page in which we will show some test protocols, may be some brand images and a button at the bottom,
+when user will click on the button then test page will open
+
+Step 4: we will keep a index variable which will be set to 0, by default in test page we will display the question & options 
+of index 0 from quesData variable.
+
+Step 5: When user will click on next button then index should increase by 1 & from quesData variable question and options
+from index 1 will start to display.
+
+Step 6: We also need to create a object which will store user response. 
+userResponse = [
+	{
+		ques_no: 1,
+		user_answer: 2
+		is_correct: true
+	},
+	{
+		ques_no: 2,
+		user_answer: 0
+		is_correct: false
+	},
+	...
+]
+
+Step 6: After submission of test, Display the score.
+
+Step 7: (optional step) -- Display all questions with correct answers.
