@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div>
+      <input type="text" id="user_name" placeholder="Enter name" /><br />
+      <input type="email" id="user_email" placeholder="Enter email" /><br />
+      <input type="text" id="user_mob" placeholder="Enter mobile" /><br />
+      <button onclick="addUser()">Add</button>
+    </div>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+
+        
+      </tbody>
+    </table>
+    <script>
+      let userData = [];
+
+      function addUser() {
+        let name = document.getElementById("user_name").value;
+        let email = document.getElementById("user_email").value;
+        let mobile = document.getElementById("user_mob").value;
+
+        userData.push({
+          name: name,
+          email: email,
+          mobile: mobile,
+        });
+        let html = "";
+        for (let user of userData) {
+          html += "<tr>";
+          html += "<td>" + user.name + "</td>";
+          html += "<td>" + user.email + "</td>";
+          html += "<td>" + user.mobile + "</td>";
+          html += "</tr>";
+        }
+        document.getElementById("tbody").innerHTML = html;
+      }
+    </script>
+  </body>
+</html>
